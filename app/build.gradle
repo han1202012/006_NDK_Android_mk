@@ -22,7 +22,7 @@ android {
                 abiFilters "armeabi-v7a"
             }*/
             ndkBuild{
-                abiFilters 'armeabi-v7a'
+                abiFilters "armeabi-v7a" , "arm64-v8a", "x86", "x86_64"
             }
         }
 
@@ -31,7 +31,7 @@ android {
         //        那么为了控制打包后的应用大小, 可以选择性打包一些库 , 此处就是进行该配置
         ndk{
             // 打包生成的 APK 文件指挥包含 ARM 指令集的动态库
-            abiFilters "armeabi-v7a"
+            abiFilters "armeabi-v7a" , "arm64-v8a", "x86", "x86_64"
         }
 
     }
@@ -50,8 +50,8 @@ android {
 
         // 配置 Android1.mk 构建脚本路径
         ndkBuild{
-            //path "src/main/ndkBuild_Shared/Android.mk"
-            path "src/main/ndkBuild_Static/Android.mk"
+            path "src/main/ndkBuild_Shared/Android.mk"
+            //path "src/main/ndkBuild_Static/Android.mk"
         }
     }
 
