@@ -9,8 +9,11 @@ public class MainActivity extends AppCompatActivity {
 
     static {
 
-        //6.0 以下的版本需要加载依赖库 , 6.0 以上的版本不需要加载依赖库
-        //System.loadLibrary("add");
+        // 加载动态库的情况 :
+        //      ① 6.0 以下的版本 : 需要手动加载依赖库 libadd.so
+        //      ② 6.0 以上的版本 : 无法使用 Android.mk 构建脚本加载第三方动态库
+        //                         此情况下, 无论是否手动加载 libadd.so 都会报错
+        System.loadLibrary("add");
         System.loadLibrary("native-lib");
     }
 
