@@ -50,7 +50,8 @@ android {
 
         // 配置 Android1.mk 构建脚本路径
         ndkBuild{
-            path "src/main/ndkBuild_Shared/Android.mk"
+            //path "src/main/ndkBuild_Shared/Android.mk"
+            path "src/main/ndkBuild_Static/Android.mk"
         }
     }
 
