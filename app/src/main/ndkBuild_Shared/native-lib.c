@@ -1,12 +1,9 @@
 #include <jni.h>
-
 #include <stdio.h>
 #include <stdlib.h>
-
 #include <android/log.h>
 
-
-//调用 libadd.so 动态库中的方法
+//声明 libadd.so 动态库中的方法
 extern int add(int a, int b);
 
 JNIEXPORT jstring JNICALL
