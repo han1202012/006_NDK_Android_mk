@@ -65,7 +65,7 @@ LOCAL_SRC_FILES := native-lib.c
 
 # 4 . 设置静态依赖库
 #	① 依赖库 : 编译 native-lib 模块 , 需要链接 add 静态库
-#	② add 静态库 : add 模块是一个预编译库 , 预编译内容是引入的第三方动态库
+#	② add 静态库 : add 模块是一个预编译库 , 预编译内容是引入的第三方静态库
 LOCAL_STATIC_LIBRARIES := add
 
 # 5 . 链接日志库
